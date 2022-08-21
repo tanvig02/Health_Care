@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        #symptom{
+            text-align: center;
+        }
+        #symptom1{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgb(160, 235, 245);">
+    <!-- symptom checker -->
+
+    <div id="symptom" class="container" >
+        <h1 class="text-center" style="font-family: serif; color: rgb(4, 126, 126);">Symptom Checker</h1>
+        <br>
+        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: x-large;">Choose a symptom and answer simple questions using our physician-reviewed Symptom</h3>
+        <h4 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large;">Checker to find a possible diagnosis for your health issue. Consult with your doctor if you feel you have a serious medical problem.</h4>
+
+        <div class="col-md-4">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mmodal">Symptom Checker</button>
+            <div id="mmodal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 1</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Selecting A Symptom</h2>
+                            <br> <br>
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#amodal">Abdominal Pain(Stomatch Pain), Long Term</button> <br> <br>
+                            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#bmodal">Ankle Problem</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#cmodal">Breast Problem in Men</button> <br><br>
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#dmodal">Breast Problem in Women</button> <br><br>
+                            <button type="button" class="btn btn-secondary btn-lg">Chest Pain in Infants and Children</button> <br><br>
+                            <button type="button" class="btn btn-info btn-lg">Chest Pain, Acute</button> <br><br>
+                            <button type="button" class="btn btn-success btn-lg">Chest Pain, Chronic</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg">Cold and Flu</button> <br><br>
+                            <button type="button" class="btn btn-primary btn-lg">Chough</button> <br><br>
+                            <button type="button" class="btn btn-secondary btn-lg">Diarrhea</button> <br><br>
+                            <button type="button" class="btn btn-danger btn-lg">Ear Problem</button> <br><br>
+                            <button type="button" class="btn btn-success btn-lg">Eye Problem</button> <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- symptom 1 questions -->
+        <div class="col-md-4">
+            <div id="amodal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 2</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Answering Questions</h2>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#a1modal">Does your pain get worse after you eat a big meal?</button> <br>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#a2modal">Do you feel pressure in your upper abdomen that gets worse <br> when you bend over or lie down at night?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#a3modal">Is the pain relieved by antacids? Is
+                                your pain improved by eating? <br> (Peptic ulcer disease could be a potential
+                                cause)</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#a4modal">Does the pain start in your upper middle or upper right abdomen, <br> and is it brought on by greasy or fatty foods?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#a5modal">Does your pain get worse when your
+                                under stress or do you <br> alternate between loose and hard bowel movements?</button>
+                            <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#a6modal">Do you have soft or diarrhea-like bowel
+                                movements many times <br> throughout the day AND mucus or blood in your stool?</button>
+                            <br><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- symptom 2 questions -->
+        <div class="col-md-4">
+            <div id="bmodal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 2</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Answering Questions</h2>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#b1modal">Did you begin to have pain and/or swelling after the ankle was hit <br> or after a fall or a twisting injury?  </button> <br>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#b2modal">Is the ankle significantly swollen, and is the pain so intense that <br> you cant put weight on that foot?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#b3modal">Is the ankle swollen and bruised, and can you still put weight <br> on that foot?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#b4modal">Do you have swelling, stiffness (especially in the morning), and/or <br> pain that comes and goes in both ankles?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#b5modal">Do you have a fever, and is one or more of your joints painful, <br> swollen, and red?</button>
+                            <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#b6modal">Did the pain start suddenly, and is it painful when clothing or <br> bedding rubs against your ankle?</button>
+                            <br><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- symptom 3 questions -->
+        <div class="col-md-4">
+            <div id="cmodal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 2</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Answering Questions</h2>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#c1modal">Do you have swelling under and/or around one or both nipples, <br> and are you between the ages of 10 and 25?  </button> <br>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#c2modal">Do you have swelling under and/or around one or both nipples, <br> and are you taking any hormones or new medicines?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#c3modal">Is your nipple red, sore, cracked, or blistered after you have been <br> running in sweat-soaked or wet workout clothes?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#c4modal">Do you have a breast lump that is tender and feels like a soft <br> grape?</button> <br><br>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- symptom 4 questions -->
+        <div class="col-md-4">
+            <div id="dmodal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 2</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Answering Questions</h2>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#d1modal">Do you have swelling and tenderness in one or both breasts?  </button> <br>
+                            <br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#d2modal">Have you given birth recently? Is there red streaking noted near the nipple?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#d3modal">Do you have tenderness in your breasts, and do both breasts feel fuller and heavier?</button> <br><br>
+                            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#d4modal">Does the swelling and tenderness seem to occur at about the same time during every menstrual cycle?</button> <br><br>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Symptom 1 question 1 answere -->
+        <div class="col-md-4">
+            <div id="a1modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Your problem may be a HIATAL HERNIA.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">See your doctor. Eat more frequent, but smaller meals. Avoid
+                                eating 2-3 hours before bed. Dont lie down right after you eat. Elevate the head of your
+                                bed with textbooks, boards, or bricks under the headboard or front feet of your bed to
+                                reduce discomfort.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- question 2 answere -->
+
+    <div class="col-md-4">
+        <div id="a2modal" role="dialog" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="color: grey;">STEP 3</h5>
+                        <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                        <br>
+                        <h4 style="color: red;">DIAGNOSIS</h4>
+                        <h4 style="color: red;">Your problem may be a HIATAL HERNIA.</h4>
+                        <hr>
+                        <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                        <p style="font-size: medium; ">See your doctor. Eat more frequent, but smaller meals. Avoid
+                            eating 2-3 hours before bed. Dont lie down right after you eat. Elevate the head of your
+                            bed with textbooks, boards, or bricks under the headboard or front feet of your bed to
+                            reduce discomfort.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="a3modal" role="dialog" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="color: grey;">STEP 3</h5>
+                        <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                        <br>
+                        <h4 style="color: red;">DIAGNOSIS</h4>
+                        <h4 style="color: red;">Your pain may be from GASTRITIS, an ULCER, or HEARTBURN. All are irritations of the stomach and esophagus.</h4>
+                        <hr>
+                        <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                        <p style="font-size: medium; ">Eat smaller meals and use an over-the-counter antacid. If antacids dont help and/or you find yourself using them more days than not in the average week, see your doctor.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="a4modal" role="dialog" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="color: grey;">STEP 3</h5>
+                        <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                        <br>
+                        <h4 style="color: red;">DIAGNOSIS</h4>
+                        <h4 style="color: red;">Your pain may be a sign of GALLSTONES or CHOLECYSTITIS (inflammation or infection of the gallbladder).</h4>
+                        <hr>
+                        <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                        <p style="font-size: medium; ">See your doctor.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div id="a5modal" role="dialog" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="color: grey;">STEP 3</h5>
+                        <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                        <br>
+                        <h4 style="color: red;">DIAGNOSIS</h4>
+                        <h4 style="color: red;">Your pain may be from IRRITABLE BOWEL SYNDROME (also known as SPASTIC COLON).</h4>
+                        <hr>
+                        <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                        <p style="font-size: medium; ">Try a diet high in soluble FIBER for 2 weeks. Take steps to reduce your stress and to exercise regularly. If you dont get better, check with your doctor. <br> Keep a food diary to determine potential triggers or causes.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- qusetion6 -->
+    <div class="col-md-4">
+        <div id="a6modal" role="dialog" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">Close</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <h5 style="color: grey;">STEP 3</h5>
+                        <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                        <br>
+                        <h4 style="color: red;">DIAGNOSIS</h4>
+                        <h4 style="color: red;">You may have CROHNS DISEASE or ULCERATIVE COLITIS, an inflammatory disease of the colon or large intestine.</h4>
+                        <hr>
+                        <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                        <p style="font-size: medium; ">See your doctor. These disorders are treatable.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+            <!--Symptom 2 question 1 answere -->
+            <div class="col-md-4">
+                <div id="b1modal" role="dialog" class="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                            </div>
+                            <div class="modal-body">
+                                <h5 style="color: grey;">STEP 3</h5>
+                                <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                                <br>
+                                <h4 style="color: red;">DIAGNOSIS</h4>
+                                <h4 style="color: red;">Your problem may be a HIATAL HERNIA.</h4>
+                                <hr>
+                                <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                                <p style="font-size: medium; ">See your doctor. Eat more frequent, but smaller meals. Avoid
+                                    eating 2-3 hours before bed. Dont lie down right after you eat. Elevate the head of your
+                                    bed with textbooks, boards, or bricks under the headboard or front feet of your bed to
+                                    reduce discomfort.</p>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- question 2 answere -->
+    
+        <div class="col-md-4">
+            <div id="b2modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may have a FRACTURE or a severe SPRAIN.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">See your doctor promptly. Dont put weight on the injured ankle. <br>
+                                Raise the ankle above your heart while sitting or lying down. Use a compression wrap to help control swelling. Place an ice pack wrapped in a thin, damp cloth on the swollen area. You can also consider using a soft compression brace and crutches.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div id="b3modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may have a SPRAINED ANKLE or a FRACTURE OF THE FIBULA.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">Raise the ankle above your heart while sitting or lying down. Use a compression wrap to help control swelling. Place an ice pack wrapped in a thin, damp cloth on the swollen area. You can also consider using a soft compression brace and crutches. <br>
+                                See your doctor if the swelling and pain continue.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div id="b4modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may have RHEUMATOID ARTHRITIS or OSTEOARTHRITIS (also called DEGENERATIVE JOINT DISEASE).</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">See your doctor. He or she can treat the symptoms of rheumatoid arthritis or osteoarthritis with a combination of therapies.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div id="b5modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Fever and a painful, red, swollen joint may be caused by an INFECTED JOINT (also called SEPTIC ARTHRITIS). More than one affected joint may be caused by RHEUMATIC FEVER.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">URGENT <br> SEE YOUR DOCTOR RIGHT AWAY.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- qusetion6 -->
+        <div class="col-md-4">
+            <div id="b6modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may have GOUT (swelling and pain caused by too much uric acid in your body).</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">See your doctor. During a gout attack (also called a flare), rest in bed until the pain eases up. Apply an ice pack wrapped in a thin, damp cloth to your ankle. Drink extra water to help flush uric acid from your body. <br>
+
+                                Avoid alcohol and high-fat foods. They can trigger gout attacks.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- symptom 3 qusetion1 -->
+        <div class="col-md-4">
+            <div id="c1modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Hormone changes during puberty may cause GYNECOMASTIA, a benign (not cancerous) swelling of one or both breasts.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">In most cases, gynecomastia will go away on its own within 6 months to 2 years. See your doctor if youre concerned, if breast tenderness is a problem, or if the breast tissue keeps growing.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- symptom 3 qusetion2 -->
+        <div class="col-md-4">
+            <div id="c2modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Hormones and some types of medicine may cause GYNECOMASTIA, a benign (not cancerous) swelling of one or both breasts.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">Talk with your doctor about whether you should stop taking hormones or medicines that cause gynecomastia. Do not stop taking your medicine without talking to your doctor first.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- symptom 3 qusetion3 -->
+        <div class="col-md-4">
+            <div id="c3modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may have RUNNERS NIPPLE (also called NIPPLE CHAFING), an irritation that develops when clothes rub against the nipple.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">Gently clean the affected area and apply antibiotic ointment. This can help your nipple heal and prevent infection. <br>
+                                When you run, prevent chafing by using petroleum jelly (one brand name: Vaseline) and adhesive bandage strips on your nipples. Wear soft, moisture-wicking workout clothes that fit properly. Avoid loose cotton clothing. If your workout clothes get wet or soaked with sweat, change them as soon as you can.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- symptom 3 qusetion4 -->
+        <div class="col-md-4">
+            <div id="c4modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may have a CYST. Cysts are fluid-filled sacs that are usually benign (not cancerous).</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">See your doctor. He or she will determine if you need any additional tests. If your cyst is painful, your doctor may use a small needle to draw fluid out of it (called aspiration).</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- symptom 4 qusetion1 -->
+        <div class="col-md-4">
+            <div id="d1modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Soon after giving birth, your breasts could become engorged with milk, causing significant swelling and tenderness. If you are breastfeeding, continue to breastfeed and the swelling/tenderness will assume a more predictable pattern based on your babys feeding pattern. <br>
+
+                                Breast pain, along with redness, nipple discharge, itching, or a fever, could be a sign of MASTITIS, an infection of a milk duct. You should continue to breastfeed during this infection. Your infection will not spread to your baby.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">If your breasts are engorged, applying warm compresses to the breast and gently expressing some milk may help if your baby is not fully emptying or relieving your discomfort. <br>
+
+                                If you have an infection, talk to your doctor. He or she may give you an antibiotic. You should continue to breastfeed during the infection.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- symptom 4 qusetion2 -->
+        <div class="col-md-4">
+            <div id="d2modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Soon after giving birth, your breasts could become engorged with milk, causing significant swelling and tenderness. If you are breastfeeding, continue to breastfeed and the swelling/tenderness will assume a more predictable pattern based on your babys feeding pattern. <br>
+
+                                Breast pain, along with redness, nipple discharge, itching, or a fever, could be a sign of MASTITIS, an infection of a milk duct. You should continue to breastfeed during this infection. Your infection will not spread to your baby.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">If your breasts are engorged, applying warm compresses to the breast and gently expressing some milk may help if your baby is not fully emptying or relieving your discomfort. <br>
+
+                                If you have an infection, talk to your doctor. He or she may give you an antibiotic. You should continue to breastfeed during the infection.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- symptom 4 qusetion3 -->
+        <div class="col-md-4">
+            <div id="d3modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">You may be PREGNANT. Changes in the way your breasts feel, along with fatigue, nausea, and frequent urination are some of the early signs of pregnancy.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">Take an at-home pregnancy test. If its positive, see your doctor.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- symptom 4 qusetion4 -->
+        <div class="col-md-4">
+            <div id="d4modal" role="dialog" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">Close</button>
+    
+                        </div>
+                        <div class="modal-body">
+                            <h5 style="color: grey;">STEP 3</h5>
+                            <h2 style="color: rgb(30, 162, 214);">Possible Causes</h2>
+                            <br>
+                            <h4 style="color: red;">DIAGNOSIS</h4>
+                            <h4 style="color: red;">Your symptoms may be caused by FIBROCYSTIC BREAST DISEASE. Many people refer to this as “lumpy-bumpy breasts.” This is a benign (not cancerous) condition that is very common.</h4>
+                            <hr>
+                            <h5 style="color: rgb(233, 115, 19);">SELF CARE</h5>
+                            <p style="font-size: medium; ">See your doctor for an examination. Your doctor may recommend that you avoid fatty foods and caffeine.</p>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+    
+
+    <br><br>
+
+</body>
+
+</html>

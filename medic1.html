@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="validation.js"></script>
+    <!-- <script src="style.css"></script> -->
+
+    <style>
+        span {
+            font-size: x-large;
+        }
+        #logo {
+            height: 80px;
+            width: 100px;
+        }
+        #blue {
+            color: lightseagreen;
+            font-size: 40px;
+        }
+        #main_img {
+            height: 600px;
+            width: 750px;
+            margin-left: -200px;
+            margin-top: -50px;
+        }
+        #doctor {
+            height: 350px;
+            width: 450px;
+        }
+        #facility {
+            text-align: center;
+        }
+        img {
+            height: 500px;
+            width: 1580px;
+        }
+        .carousel-inner{
+            margin: 10px;
+            padding: 10px;
+        }
+        .carousel-caption {
+            color: black;
+        }
+        #page {
+            background-image: url(fp1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 750px;
+        }
+        .navbar {
+            margin-bottom: 0px;
+        }
+        #disease {
+            text-align: center;
+        }
+        .collapse {
+            margin: 5px;
+            padding: 5px;
+            background-color: white;
+            color: black;
+        }
+        .button:hover:before {
+            top: 0%
+        }
+        #dept{
+            padding: 20px;
+            height: 400px;
+            width: 200px;
+        }
+        .page-footer{
+            background-color: rgb(219, 240, 248);
+            padding: 50px;
+        }
+        .footer-menu{
+            font-size: larger;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .page-footer h5{
+            font-size: x-large;
+        }
+        .footer-sosmed a{
+            font-size: medium;
+        }
+        iframe{
+            height: 20%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(219, 240, 248);">
+    <div id="page" class="container-fluid">
+
+        <!-- navbar -->
+        <nav class="navbar navbar-defult ">
+            <div class="container-fluid">
+                <div class="navbar-heading">
+                    <span><img id="logo" src="logo.png" alt=""><b>H</b>ealth<b>C</b>are</span>
+
+                    <ul class="nav navbar-right nav-pills">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#aboutUs">About</a></li>
+                        <li><a href="patient_details.html">Appoinment Details</a></li>
+                        <li><a href="#footer">Contacts</a></li>
+                        <!-- <li><a href="login.html">Log-in</a></li> -->
+                        <li><a href="#"><b>Centers of Excellence</b></a>
+                            <li class="dropdown"><a href="#" class="dropdown_toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <ul id="dept" class="dropdown-menu">
+                                    <li><b></b></li>
+                                    <li>Cardiology</li>
+                                    <li>Cardiac Surgery</li>
+                                    <li>Liver Transplant & HPB Surgery</li>
+                                    <li>Neurology</li>
+                                    <li>Neurosurgery</li>
+                                    <li>Visual Basics</li>
+                                    <li>Orthopaedics</li>
+                                    <li>Nephrology</li>
+                                    <hr>
+                                    <li>Robotic Surgery</li>
+                                    <li>Vascular Surgery</li>
+                                    <li>Radiation Oncology</li>
+                                </ul>
+                            </li>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            Covid-19 Alert! Vaccinated as soon as possible! Care for your Health!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <!-- Front Page -->
+        <div class="col-md-6" id="Front-page"></div>
+        <div class="col-md-6">
+            <h1><span id="blue">Stay</span> Healthy, <br> <span id="blue">Stay</span> Safe</h1>
+            <h1>Caring For Your Life</h1>
+
+            <br>
+            <!-- Collaps Information -->
+            <button class="btn btn-lg btn-info" type="button" data-toggle="collapse" data-target="#learnmore">Learn
+                More</button> <br> <br>
+            <div id="learnmore" class="collapse">
+                <h4 style="font-family: serif;">HealthCare is a multi-disciplinary health center for excellence in
+                    Women's, Men's and Pelvic Health. We've been around for a long time and we just love working with
+                    people and seeing what they can achive with right support</h4> <br>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <!-- About Us-->
+
+    <div class="container" id="aboutUs">
+        <h1 class="text-center" style="font-family: serif; color: rgb(4, 126, 126);">Building a center of Excellence for
+            a Helathy Lifestyle</h1><br>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: x-large;">
+            HealthCare is a multi-disciplinary health center for excellence in Women's, Men's and Pelvic Health. We've
+            been around for a long time and we just love working with people and seeing what they can achive with right
+            support</p> <br>
+        <p
+            style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large;">
+            We're here to listen - to hear your story - and then apply our knowledge to help you improve your life as
+            much as possible. We want to help you to achive your goals, to maximise your lifestyle choices and to
+            improve your overall health and wellbeing. We don't just work with where you are at, we want to empower you
+            to do more now and into Future! </p>
+    </div>
+    <br><br>
+
+    <!-- OUR SERVICES PAGE -->
+
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center" style="font-family: serif; color: rgb(4, 126, 126);">Our Services</h1>
+            <div class="col-md-7">
+                <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Ambulance Services
+                </h2>
+                <p
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">
+                    24X7 Emergency Ambulance Service. Services Well Equipped, Oxygen Ambulance at your Doorstep. <br>
+                    ICU Ambulance, Cardiac Ambulance, Death Body Ambulance, Mortuary Ambulance etc. at your Doorstep.
+                    Affordable Rate.</p>
+                <br>
+                <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Emergency Rooms
+                </h2>
+                <p
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">
+                    Always on alert for any Medical Emergency, Our Emengency unit is open for 24X7! <br>We provide you
+                    full-fledged facility with state-of-the-art clinic support, the team of trained and experienced
+                    doctors, paramedics, and nurses, here we have exceptional facilities st home to extend immediate
+                    medical care to critically ill or injured patients.</p>
+                <br>
+                <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Free Checkups</h2>
+                <p
+                    style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">
+                    24/7 Services Available</p>
+            </div>
+
+            <div class="col-md-5">
+                <img id="doctor" src="doctor.png" alt="">
+            </div>
+        </div>
+    </div> <br><br>
+
+ 
+    <!-- FOOTER SECTION STARTS HERE -->
+
+    <footer class="page-footer" id="footer">
+        <div class="container">
+          <div class="row px-md-3">
+            <div class="col-sm-6 col-lg-3 py-3">
+              <h5>Company</h5>
+              <ul class="footer-menu">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Editorial Team</a></li>
+                <li><a href="#">Protection</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+                <h5>Contact</h5>
+                <p class="footer-link mt-2">Southern Command Hospital<br> Pune Cantonment, Pune, Maharashtra 411001</p>
+                <a href="#" class="footer-link">701-573-7582</a> <br>
+                <a href="#" class="footer-link">healthcare@temporary.net</a>
+            </div>
+            
+            <div class="col-sm-6 col-lg-3 py-3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7339593535294!2d73.88227881484237!3d18.49570608742351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c02dc79e6f75%3A0x4c906aca2c1740ba!2sCommand%20Hospital%20(%20Southern%20Command)!5e0!3m2!1sen!2sin!4v1651845552666!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="col-sm-6 col-lg-3 py-3">
+                <h5 class="mt-3">Social Media</h5>
+                <div class="footer-sosmed mt-3">
+                  <a href="https://www.linkedin.com/in/tanvi-gaikwad-2002" target="_blank">linkedin.com/in/tanvi-gaikwad</a>
+                  <a href="https://www.linkedin.com/in/vaishnavi-bhave-3358b1218" target="_blank">linkedin.com/in/vaishnavi-bhave</a>
+                  <a href="https://www.linkedin.com/in/mayuri-borse-a07b53239" target="_blank">linkedin.com/in/mayuri-borse</a>
+                </div>
+              </div>
+          </div>
+
+</body>
+</html>

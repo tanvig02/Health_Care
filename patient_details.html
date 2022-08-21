@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        var patient = [];
+        var x;
+        $(document).ready(function(){
+            ClearData();
+            
+            $("#btnsubmit").click(function(){
+                Addpatient();
+            })
+            $("#btnupdate").click(function(){
+                update(); 
+            })
+            $("#btndelete").click(function(){
+                remove();
+            })
+            $("#btnclear").click(function(){
+                ClearData();
+            })
+
+        })
+
+        function Addpatient(){
+            var n = $("#name").val();
+            var d = $("#dob").val();
+            var g = $(".rbtn:checked").val();
+            var bg = $(".bloodgr:checked").val();
+            var ms = $(".status:checked").val();
+            var p = $("#phone").val();
+            var e = $("#email").val();
+            var a = $("#address").val();
+            var pt = {"name": n, "dob": d, "gender": g, "bloodgr": bg, "status": ms, "phone": p, "email": e, "address": a};  //these name should be same to add at table in displaystudent() function
+            patient.push(pt);
+            ClearData();
+            displaypatient();
+       }
+
+       function ClearData(){
+           $("#btnsubmit").show();
+           $("#btnupdate").hide();
+           $("#btndelete").hide();
+           $("#btnclear").hide();
+           $("#name").val("");  //clearing the data in textbox
+           $("#dob").val("");
+           $(".rbtn:checked").val();
+           $(".bloodgr:checked").val("");
+           $(".status:checked").val("");
+           $("#phone").val("");
+           $("#email").val("");
+           $("#address").val("");
+       }
+
+       function displaypatient(){
+           $("#tbldata").empty();
+           $.each(patient, function(i, d){
+               $("#tbldata").append("<tr><td>" + d.name + "</td><td>" + d.dob + "</td><td>" + d.gender + "</td><td>" + d.bloodgr + "</td><td>" + d.status + "</td><td>" + d.phone + "</td><td>" + d.email + "</td><td>" + d.address +"</td><td><input type='button' value='view' onclick='viewpatient("+i+")'></td></tr>")
+           });
+       }
+
+       function viewpatient(p){
+           x= p;
+           $("#btnsubmit").hide();
+           $("#btnupdate").show();
+           $("#btndelete").show();
+           $("#btnclear").show();
+           var d = patient[p];
+           $("#name").val(d.name);
+           $("#dob").val(d.dob);
+           $(".rbtn:checked").val(d.gender);
+           $(".bloodgr:checked").val(d.bloodgr);
+           $(".status:checked").val(d.status);
+           $("#phone").val(d.phone);
+           $("#email").val(d.email);
+           $("#address").val(d.address);
+       }
+
+       function remove(){
+           if (confirm("Do you really want to Delete?")){
+               patient.splice(x,1);
+           }
+           ClearData();
+           displaypatient();
+       }
+
+       function update(){
+        var n = $("#name").val();
+        var d = $("#dob").val();
+        var g = $(".rbtn:checked").val();
+        var bg = $(".bloodgr:checked").val();
+        var ms = $(".status:checked").val();
+        var p = $("#phone").val();
+        var e = $("#email").val();
+        var a = $("#address").val();
+        var pt = {"name": n, "dob": d, "gender": g, "bloodgr": bg, "status": ms, "phone": p, "email": e, "address": a};
+            patient [x] = pt;
+            displaypatient();
+       }
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <form class="panel panel-primary">
+            <div class="panel-heading">
+                <h2>Patient Details</h2>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label type="text" >Name</label>
+                    <input type="text" id="name" class="form-control" > <br>
+
+                    <label type="date" >Date of Birth</label>
+                    <input type="date" id="dob" class="form-control" > <br>
+
+                    <label type="radio"  >Gender</label><br>
+                    <input type="radio" value="female" name="gender" class="rbtn">Female
+                    <input type="radio" value="male" name="gender" class="rbtn">Male <br> <br>
+
+                    <label name="Symptoms">Symptoms</label> <br>
+                    <input type="checkbox">Body aches and headaches <br>
+                    <input type="checkbox">Fever <br>
+                    <input type="checkbox">Cold <br>
+                    <input type="checkbox">Intermittent or constant sweating <br>
+                    <input type="checkbox">Flushed complexion or hot skin <br>
+                    <input type="checkbox">Chills, shivering, shaking <br><br>
+                    
+                    <label>Blood Group</label><br>
+                    <select name="Blood Group" >
+                        <option value="O+" class="bloodgr">O+</option>
+                        <option value="O-" class="bloodgr">O-</option>
+                        <option value="A+" class="bloodgr">A+</option>
+                        <option value="A-" class="bloodgr">A-</option>
+                        <option value="B+" class="bloodgr">B+</option>
+                        <option value="B-" class="bloodgr">B-</option>
+                        <option value="AB+" class="bloodgr">AB+</option>
+                        <option value="AB-" class="bloodgr">AB-</option>
+                    </select> <br><br>
+
+                    <label type="radio" >Marital Status</label><br>
+                    <input type="radio" name="mstatus" value="Single" class="status">Single
+                    <input type="radio" name="mstatus" value="Married" class="status">Married<br> <br>
+
+                    <label for="">Phone Number</label>
+                    <input type="text" class="form-control" id="phone">
+
+                    <label for="">Email Id</label>
+                    <input type="email" class="form-control" id="email">
+
+                    <label for="">Address</label>
+                    <textarea name="" id="address" cols="10" rows="3" class="form-control" ></textarea>
+
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <input type="button" value="submit" id="btnsubmit">
+                <input type="button" value="update" id="btnupdate">
+                <input type="button" value="delete" id="btndelete">
+                <input type="button" value="clear" id="btnclear">
+
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <table border="1" cellspacing = "0" class="table">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Date of Birth</td>
+                    <td>Gender</td>
+                    <td>Blood Group</td>
+                    <td>Marital Status</td>
+                    <td>Phone Number</td>
+                    <td>Email Id</td>
+                    <td>Address</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+
+            <tbody id="tbldata"></tbody>
+
+        </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- appoinment button -->
+
+    <button class="btn btn-info btn-lg" type="list" data-toggle="modal" data-target="#mymodal">Book
+        Appoinment</button>
+    <div id="mymodal" class="modal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">Close</button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="myForm" onclick="validation()">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h1>Appoinment Booking</h1>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label name="Name"> Name</label>
+                                    <input type="text" name="Name" class="form-control"> <br>
+
+                                    <label name="Gender">Gender</label> <br>
+                                    <input type="radio" name="Gender">Female
+                                    <input type="radio" name="Gender">Male
+                                    <input type="radio" name="Gender">Transgender <br> <br>
+
+                                    <label name="Symptoms">Symptoms</label> <br>
+                                    <input type="checkbox">Body aches and headaches <br>
+                                    <input type="checkbox">Fever <br>
+                                    <input type="checkbox">Cold <br>
+                                    <input type="checkbox">Intermittent or constant sweating <br>
+                                    <input type="checkbox">Flushed complexion or hot skin <br>
+                                    <input type="checkbox">Chills, shivering, shaking <br><br>
+
+                                    <label name="Slot_Time">Slot Time</label>
+                                    <input type="date" name="Slot_Time" class="form-control"> <br>
+                                    <input type="time" name="Slot_Time" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info">Submit</button>
+                    <input type="reset" name="Reset">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br><br>
+</body>
+</html>
